@@ -13,3 +13,16 @@
 /* ================================= 
   Media Queries
 ==================================== */
+
+@media (min-width: 769px) {
+
+
+/* ---- Float Clearfix for floats, if used --- */
+
+.clearfix::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+}
