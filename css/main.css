@@ -2,6 +2,10 @@
   Base Styles
 ==================================== */
 
+/* If I didn't already reference "css/normalize.css" in "index.html", I'd use:
+@import url('http://necolas.github.io/normalize.css/7.0.0/normalize.css'); */
+
+
 /* ================================= 
   Base Layout Styles
 ==================================== */
