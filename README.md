@@ -2,11 +2,13 @@
 
 ## Description
 ```
-A brief description of your project
+As part of the graduation requirements for Code Louisville's Front End Web Development (FEWD) track, completion of a project* is required.  For my project, I elected to create a professional website, which will serve to market my skills and provide a platform to showcase future projects. The project will be built using a "mobile first" design philosophy and will feature HTML, CSS, & JavaScript.
+
+* https://github.com/CodeLouisville/Student-Resources/wiki/Front-End-Web-Development-Project-Requirements
+
+
 
 ```
-
-
 
 ## Custom CSS Classes
 ```
