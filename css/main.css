@@ -13,6 +13,31 @@ body {
   color: grey;  
 }
 
+header,
+footer {
+  margin-top: 0;
+  background-color: grey;
+  color: snow;
+  font: bolder;
+  width: 100%;  
+}
+
+h1 {
+  margin-bottom: -10px;
+}
+
+a {
+  color: snow;
+  text-decoration: none;
+}
+
+header {
+  text-align: center;
+  padding: 10px 15px;
+  box-shadow: 0px 3px 5px black;
+  border-width: 20px;
+}
+
 /* ======================================================
   Base Style (for 360px wide screens and beyond)
 ========================================================= */
@@ -20,13 +45,6 @@ body {
 /* If I didn't already reference "css/normalize.css" in "index.html", I'd use:
 @import url('http://necolas.github.io/normalize.css/7.0.0/normalize.css'); */
 
-.main-header,
-.name,
-.main-nav {
-  background-color: grey;
-  color: snow;
-  font: bolder;  
-}
 
 /* ========================================================
   Base Layout Styles (placement of columns, nav bars, etc.)
@@ -34,14 +52,12 @@ body {
 
 /* ---- Navigation ---- */
 
-.container,
-.name,
-.main-nav,
-.main-nav li {
-  text-align: center;
-  padding: 10px 15px;
+.main-nav a {
+  color: snow;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0;
 }
-
 /* ---- Layout Containers ---- */
 
 .wrap-all-content {
