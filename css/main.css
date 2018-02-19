@@ -1,34 +1,97 @@
-/* ================================= 
-  Base Styles
-==================================== */
+/* ======================================================
+  Base Element Styles (targets HTML tags only)
+========================================================= */
+
+* {
+  font-family: 'Julius Sans One', sans-serif;
+  line-height: 1.5;
+  display: block;
+}
+
+body {    
+  background-color: snow;
+  color: grey;  
+}
+
+header,
+footer {
+  margin-top: 0;
+  background-color: grey;
+  color: snow;
+  font: bolder;
+  width: 100%;  
+}
+
+h1 {
+  margin-bottom: -10px;
+}
+
+a {
+  color: snow;
+  text-decoration: none;
+}
+
+header {
+  text-align: center;
+  padding: 10px 15px;
+  box-shadow: 0px 3px 5px black;
+  border-width: 20px;
+}
+
+/* ======================================================
+  Base Style (for 360px wide screens and beyond)
+========================================================= */
 
 /* If I didn't already reference "css/normalize.css" in "index.html", I'd use:
 @import url('http://necolas.github.io/normalize.css/7.0.0/normalize.css'); */
 
 
-/* ================================= 
-  Base Layout Styles
-==================================== */
+/* ========================================================
+  Base Layout Styles (placement of columns, nav bars, etc.)
+=========================================================== */
 
 /* ---- Navigation ---- */
 
+.main-nav a {
+  color: snow;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0;
+}
 /* ---- Layout Containers ---- */
 
-/* ================================= 
-  Media Queries
-==================================== */
+.wrap-all-content {
+  width: 70%;
+  margin: 0 auto;  
+}
+
+/* =======================================================
+  Media Queries (wide screen appearance stuff)
+========================================================== */
 
 /* iPad has width of 768px, therefore anything wider than that will be first media query. Source: http://www.javascriptkit.com/dhtmltutors/cssmediaqueries2.shtml */
 
 @media (min-width: 769px) {
+  .wrap-all-content {
+    width: 100%;
+  }
 
+  .name,
+  .main-nav,
+  .main-nav li {
+    display: inline;
+  }
 
-/* ---- Float Clearfix for floats, if used --- */
+  .main-header {
+    width: 100%;
+    color: black;
+  }
 
-.clearfix::after {
-  content: " ";
-  display: table;
-  clear: both;
-}
+  /* ---- Float Clearfix ---- */
 
+  .clearfix::after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
 }
