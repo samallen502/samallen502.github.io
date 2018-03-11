@@ -1,49 +1,39 @@
-/* If I didn't already reference "css/normalize.css" in "index.html", I'd use:
-@import url('http://necolas.github.io/normalize.css/7.0.0/normalize.css'); */
+/* Load normalize.css and font CDNs (removed from HTML for faster loading if user has cached). */
+@import url('http://necolas.github.io/normalize.css/7.0.0/normalize.css');
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One');
 
 /* ======================================================
-  Base Element Styles (targets HTML tags only)
+  Base Styles
 ========================================================= */
 
-/* Universal Selector sets all elements to...*/
-* {
-  font-family: 'Julius Sans One', sans-serif;
-  line-height: 1.3;
-}
-
 body {
-  background-color: snow;
-  color: grey;
-  /* Next 3 lines force a sticky footer (along with ".content" "flex-grow" rule) by: (1) making all child elements flex items; (2) stacking all child elements vertically; and (3) making the body take up the entire height of the viewport */
-  display: flex; 
-  flex-direction: column;
-  min-height: 100vh;
+  background-color: #F8F8F8;
+  color: #202020;
+  font-family: 'Julius Sans One', sans-serif;
+  line-height: 1.3em;
+  text-transform: none;
 }
 
 header,
 footer {
-  background-color: grey;
-  color: snow;
-  font: bolder;
-}
-
-a {
-  color: snow;
-  text-decoration: none;
+  background-color: #202020;
+  color: #F8F8F8;
+  min-width: 100%;
 }
 
 header {
-  text-align: center;
-  padding: 1em 1.5em;
+  /* text-align: center;
+  padding: 1rem 1.5rem; */
   box-shadow: 0px 3px 5px black;
   border-width: 20px;
 }
 
+/*
 ul li {
   list-style: none;
   margin: 1em;
-  font-size: 125%; /* Makes font size 125% of parent container. */
-}
+  font-size: 125%; <-- Makes font size 125% of parent container.
+} */
 
 /* ========================================================
   Base Layout Styles (placement of columns, nav bars, etc.)
@@ -51,21 +41,104 @@ ul li {
 
 /* ---- Navigation ---- */
 
-header {
-  flex-wrap: wrap;
+/* Fix navBar to top of screen and make it span the whole width of screen. */
+.navBar {
+  background-color: #202020;
+  position: fixed;
+  top: 0;
+  min-width: 100%;
 }
 
-.main-nav a {
+.title {
+  color: #F8F8F8;
+  font-size: 1.25em;
+  display: inline-block;
+}
+
+.title:hover {
+  color: #C5B358;
+}
+
+/* Center nav bar content on mobile devices until first min-width breakpoint kicks in. */
+.wrapper {
+  margin: 0 auto;
+  max-width: 768px;
+  padding: 0 2%;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  width: 50%;
+  background-color: #DCDCDC;
+  display: block;
+
+  height: 0;
+  list-style-type: none;
+  opacity: 0;
+  text-align: center;
+  /* Upon user toggle, transition height, opacity, and visibility. */
+  transition: all 1s ease;
+  width: 100%;
+  visibility: hidden;
+}
+
+nav ul a {
+  color: #202020;
+  text-decoration: none;
+}
+
+nav ul a:hover {
+  color: #C5B358;
+}
+
+nav ul li {
+  display: inline-block;
+  border-bottom: 2px solid #202020;
+  color: #202020;
+  display: block;
+  font-size: 1.5em;
+  padding: 2em 0;
+}
+
+#hidden-checkbox,
+.menu-toggle {
+  display: none;
+}
+
+#hidden-checkbox:checked ~ ul {
+  opacity: 1;
+  height: 100vh;
+  visibility: visible;
+}
+
+/* Style the label toggle to mimmick a menu icon. */
+.menu-toggle {
+  background: linear-gradient(to bottom, #F8F8F8 0%, #F8F8F8 20%, transparent 20%, transparent 40%, #F8F8F8 40%, #F8F8F8 60%, transparent 60%, transparent 80%, #F8F8F8 80%, #F8F8F8 100%);
+  cursor: pointer;
+  display: block;
+  float: right;
+  height: 2em;
+  margin-top: 1em;
+  width: 2em;
+}
+
+.wrapper {
+  display: block;
+}
+
+/* .main-nav a {
   color: snow;
   text-decoration: none;
   font-weight: bold;
-}
+} */
 
 /* ---- Layout Containers ---- */
 
-.content {
-  flex-grow: 1;
-}
 
 /* =======================================================
   Media Queries (wide screen appearance stuff)
@@ -74,14 +147,60 @@ header {
 /* iPad has width of 768px, therefore anything wider than that will be first media query. Source: http://www.javascriptkit.com/dhtmltutors/cssmediaqueries2.shtml */
 
 @media (min-width: 769px) {
+
+  body {
+    background-color: snow;
+    color: grey;
+    /* Next 3 lines force a sticky footer (along with ".content" "flex-grow" rule) by: (1) making all child elements flex items; (2) stacking all child elements vertically; and (3) making the body take up the entire height of the viewport */
+    display: flex; 
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  header,
+  footer {
+  background-color: grey;
+  color: snow;
+  font: bolder;
+  }
+
+  a {
+    color: snow;
+    text-decoration: none;
+  }
+  
+  header {
+    text-align: center;
+    padding: 1em 1.5em;
+    box-shadow: 0px 3px 5px black;
+    border-width: 20px;
+    flex-wrap: wrap;
+  }
+
+  ul li {
+    list-style: none;
+    margin: 1em;
+    font-size: 125%; /* Makes font size 125% of parent container. */
+  }
+
   .main-nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
+
+  .main-nav a {
+    color: snow;
+    text-decoration: none;
+    font-weight: bold;
+  }
   
-  .item-1 {
+  .title {
     margin-right: auto;
+  }
+
+  .content {
+    flex-grow: 1;
   }
 
   /* ---- Float Clearfix ----
