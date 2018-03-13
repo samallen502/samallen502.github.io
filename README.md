@@ -31,3 +31,9 @@ The javascript functions I created are:
 .. what function does ex( animate() is used to move the elements in the info div across the screen)
 
 ```
+
+## Acknowledgements
+
+I'd like to take this opportunity to thank some folks who shared knowledge, making this project possible:
+
+1. https://blog.christopherianmurphy.com/2016/01/responsive-pure-css-menu/ helped me build a responsive mobile-first menu that was intentionally free of JavaScript (as core features should not depend upon JavaScript per the "unobtrusive JavaScript" principle).

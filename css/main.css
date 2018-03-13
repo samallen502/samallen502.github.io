@@ -4,7 +4,7 @@
 
 /* ======================================================
   Base Styles
-========================================================= */
+====================================================== */
 
 body {
   background-color: #F8F8F8;
@@ -28,12 +28,21 @@ header {
   border-width: 20px;
 }
 
-/*
-ul li {
-  list-style: none;
-  margin: 1em;
-  font-size: 125%; <-- Makes font size 125% of parent container.
-} */
+footer {
+  text-align: center;
+}
+
+h1 {
+  padding-top: 1em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Center list items when stacked, override ul tag's default properties*/
+ul {
+  padding-top: 0.3em;
+  margin-bottom: 0.3em;
+}
 
 /* ========================================================
   Base Layout Styles (placement of columns, nav bars, etc.)
@@ -76,7 +85,6 @@ nav ul {
   width: 50%;
   background-color: #DCDCDC;
   display: block;
-
   height: 0;
   list-style-type: none;
   opacity: 0;
@@ -137,8 +145,15 @@ nav ul li {
   font-weight: bold;
 } */
 
+.menuOptions {
+  padding: 0;
+}
+
 /* ---- Layout Containers ---- */
 
+.content {
+  padding-top: 3.75em;
+}
 
 /* =======================================================
   Media Queries (wide screen appearance stuff)
@@ -146,7 +161,7 @@ nav ul li {
 
 /* iPad has width of 768px, therefore anything wider than that will be first media query. Source: http://www.javascriptkit.com/dhtmltutors/cssmediaqueries2.shtml */
 
-@media (min-width: 769px) {
+@media (min-width: 700px) {
 
   body {
     background-color: snow;
@@ -183,13 +198,13 @@ nav ul li {
     font-size: 125%; /* Makes font size 125% of parent container. */
   }
 
-  .main-nav {
+  .menuOptions {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
 
-  .main-nav a {
+  .menuOptions a {
     color: snow;
     text-decoration: none;
     font-weight: bold;
