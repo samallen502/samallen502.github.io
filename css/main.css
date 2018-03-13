@@ -161,7 +161,7 @@ nav ul li {
 
 /* iPad has width of 768px, therefore anything wider than that will be first media query. Source: http://www.javascriptkit.com/dhtmltutors/cssmediaqueries2.shtml */
 
-@media (min-width: 700px) {
+@media (min-width: 769px) {
 
   body {
     background-color: snow;
