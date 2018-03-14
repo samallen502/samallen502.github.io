@@ -41,7 +41,7 @@ h1 {
 /* Center list items when stacked, override ul tag's default properties*/
 ul {
   padding-top: 0.3em;
-  margin-bottom: 0.3em;
+  margin-bottom: 0em;
 }
 
 /* ========================================================
@@ -60,7 +60,7 @@ ul {
 
 .title {
   color: #F8F8F8;
-  font-size: 1.25em;
+  font-size: 1.35em;
   display: inline-block;
 }
 
@@ -172,11 +172,21 @@ nav ul li {
     min-height: 100vh;
   }
 
-  header,
-  footer {
+  .navBar {
   background-color: grey;
   color: snow;
   font: bolder;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  footer {
+    text-align: left;
+    background-color: grey;
+    color: snow;
+    font: bolder;
   }
 
   a {
