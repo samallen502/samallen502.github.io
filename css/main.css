@@ -162,20 +162,38 @@ nav ul li {
 /* iPad has width of 768px, therefore anything wider than that will be first media query. Source: http://www.javascriptkit.com/dhtmltutors/cssmediaqueries2.shtml */
 
 @media (min-width: 769px) {
-
   body {
     background-color: snow;
     color: grey;
     /* Next 3 lines force a sticky footer (along with ".content" "flex-grow" rule) by: (1) making all child elements flex items; (2) stacking all child elements vertically; and (3) making the body take up the entire height of the viewport */
-    display: flex; 
+    display: flex;
     flex-direction: column;
     min-height: 100vh;
   }
 
+  /* .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .title {
+    margin-right: auto;
+  }
+  
+  #hidden-checkbox,
+  .menu-toggle {
+  display: none;
+  } */
+
   .navBar {
-  background-color: grey;
-  color: snow;
-  font: bolder;
+    background-color: grey;
+    color: snow;
+    font: bolder;
+    padding: 1em 1.5em;
+    box-shadow: 0px 3px 5px black;
+    border-width: 20px;
+    flex-wrap: wrap;
   }
 
   .menu-toggle {
@@ -193,16 +211,8 @@ nav ul li {
     color: snow;
     text-decoration: none;
   }
-  
-  header {
-    text-align: center;
-    padding: 1em 1.5em;
-    box-shadow: 0px 3px 5px black;
-    border-width: 20px;
-    flex-wrap: wrap;
-  }
 
-  ul li {
+  ul li a {
     list-style: none;
     margin: 1em;
     font-size: 125%; /* Makes font size 125% of parent container. */
