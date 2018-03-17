@@ -2,37 +2,38 @@
 @import url('http://necolas.github.io/normalize.css/7.0.0/normalize.css');
 @import url('https://fonts.googleapis.com/css?family=Julius+Sans+One');
 
-/* ======================================================
-  Base Styles
-====================================================== */
+/* ===========================================================================================
+  Base Styles (how elements shoud look across all viewports unless overridden by media query)
+=========================================================================================== */
 
 body {
   background-color: #F8F8F8;
-  color: #202020;
+  color: #202020; /* Mobile users need more contrast than grey. */
   font-family: 'Julius Sans One', sans-serif;
   line-height: 1.3em;
   text-transform: none;
 }
 
-header,
-footer {
+header {
+  /* Next 3 lines fix header to top of screen and make header span the whole width of screen. */
+  position: fixed;
+  top: 0;
+  min-width: 100%;
   background-color: #202020;
   color: #F8F8F8;
-  min-width: 100%;
-}
-
-header {
-  /* text-align: center;
-  padding: 1rem 1.5rem; */
   box-shadow: 0px 3px 5px black;
   border-width: 20px;
 }
 
-footer {
-  text-align: center;
+nav {
+  display: flex;
+  justify-content: space-between;
 }
 
-h1 {
+nav h1 {
+  color: #F8F8F8;
+  font-size: 1.35em;
+  display: inline-block;
   padding-top: 1em;
   margin-top: 0;
   margin-bottom: 0;
@@ -44,29 +45,30 @@ ul {
   margin-bottom: 0em;
 }
 
-/* ========================================================
+nav h1:hover,
+nav ul a:hover {
+  color: #C5B358;
+}
+
+footer {
+  background-color: #202020;
+  color: #F8F8F8;
+  min-width: 100%;
+  text-align: center;
+}
+
+/* ===========================================================================================
   Base Layout Styles (placement of columns, nav bars, etc.)
-=========================================================== */
+=========================================================================================== */
 
 /* ---- Navigation ---- */
 
-/* Fix navBar to top of screen and make it span the whole width of screen. */
+/* Fix navBar to top of screen and make it span the whole width of screen.
 .navBar {
   background-color: #202020;
-  position: fixed;
   top: 0;
   min-width: 100%;
-}
-
-.title {
-  color: #F8F8F8;
-  font-size: 1.35em;
-  display: inline-block;
-}
-
-.title:hover {
-  color: #C5B358;
-}
+} */
 
 /* Center nav bar content on mobile devices until first min-width breakpoint kicks in. */
 .wrapper {
@@ -74,79 +76,71 @@ ul {
   max-width: 768px;
   padding: 0 2%;
   align-items: center;
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
 }
 
-nav ul {
-  display: flex;
-  justify-content: space-between;
-  list-style-type: none;
-  width: 50%;
-  background-color: #DCDCDC;
-  display: block;
-  height: 0;
-  list-style-type: none;
-  opacity: 0;
-  text-align: center;
-  /* Upon user toggle, transition height, opacity, and visibility. */
-  transition: all 1s ease;
-  width: 100%;
-  visibility: hidden;
-}
+@media (max-width: 768px) {  
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 50%;
+    background-color: #DCDCDC;
+    display: block;
+    height: 0;
+    list-style-type: none;
+    opacity: 0;
+    text-align: center;
+    /* Upon user toggle, transition height, opacity, and visibility. */
+    transition: all 1s ease;
+    width: 100%;
+    visibility: hidden;
+  }
 
-nav ul a {
-  color: #202020;
-  text-decoration: none;
-}
+  nav ul a {
+    color: #202020;
+    text-decoration: none;
+  }
 
-nav ul a:hover {
-  color: #C5B358;
-}
+  nav ul li {
+    display: inline-block;
+    border-bottom: 2px solid #202020;
+    color: #202020;
+    display: block;
+    font-size: 1.5em;
+    padding: 2em 0;
+  }
 
-nav ul li {
-  display: inline-block;
-  border-bottom: 2px solid #202020;
-  color: #202020;
-  display: block;
-  font-size: 1.5em;
-  padding: 2em 0;
-}
+  #hidden-checkbox,
+  .menu-toggle {
+    display: none;
+  }
 
-#hidden-checkbox,
-.menu-toggle {
-  display: none;
-}
+  #hidden-checkbox:checked ~ ul {
+    opacity: 1;
+    height: 100vh;
+    visibility: visible;
+  }
 
-#hidden-checkbox:checked ~ ul {
-  opacity: 1;
-  height: 100vh;
-  visibility: visible;
-}
+  /* Style the label toggle to mimmick a menu icon. */
+  .menu-toggle {
+    background: linear-gradient(to bottom, #F8F8F8 0%, #F8F8F8 20%, transparent 20%, transparent 40%, #F8F8F8 40%, #F8F8F8 60%, transparent 60%, transparent 80%, #F8F8F8 80%, #F8F8F8 100%);
+    cursor: pointer;
+    display: block;
+    float: right;
+    height: 2em;
+    margin-top: 1em;
+    width: 2em;
+  }
 
-/* Style the label toggle to mimmick a menu icon. */
-.menu-toggle {
-  background: linear-gradient(to bottom, #F8F8F8 0%, #F8F8F8 20%, transparent 20%, transparent 40%, #F8F8F8 40%, #F8F8F8 60%, transparent 60%, transparent 80%, #F8F8F8 80%, #F8F8F8 100%);
-  cursor: pointer;
-  display: block;
-  float: right;
-  height: 2em;
-  margin-top: 1em;
-  width: 2em;
-}
+  .menuOptions {
+    padding: 0;
+  }
 
-.wrapper {
-  display: block;
-}
-
-/* .main-nav a {
-  color: snow;
-  text-decoration: none;
-  font-weight: bold;
-} */
-
-.menuOptions {
-  padding: 0;
+  .wrapper {
+    display: block;
+  }
 }
 
 /* ---- Layout Containers ---- */
