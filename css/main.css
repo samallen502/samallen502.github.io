@@ -31,7 +31,7 @@ nav {
 }
 
 nav h1 {
-  color: #F8F8F8;
+  /* color: #F8F8F8; */
   font-size: 1.35em;
   display: inline-block;
   padding-top: 1em;
@@ -39,8 +39,9 @@ nav h1 {
   margin-bottom: 0;
 }
 
-/* Center list items when stacked, override ul tag's default properties*/
 nav ul {
+  /* Remove default bullet points. */
+  list-style-type: none;
   padding-top: 0.3em;
   margin-bottom: 0em;
 }
@@ -82,14 +83,9 @@ footer {
 
 @media (max-width: 768px) {  
   nav ul {
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
-    width: 50%;
     background-color: #DCDCDC;
     display: block;
     height: 0;
-    list-style-type: none;
     opacity: 0;
     text-align: center;
     /* Upon user toggle, transition height, opacity, and visibility. */
@@ -98,18 +94,17 @@ footer {
     visibility: hidden;
   }
 
-  nav ul a {
-    color: #202020;
-    text-decoration: none;
-  }
-
   nav ul li {
-    display: inline-block;
     border-bottom: 2px solid #202020;
     color: #202020;
     display: block;
     font-size: 1.5em;
     padding: 2em 0;
+  }
+
+  nav ul li a {
+    color: #202020;
+    text-decoration: none;
   }
 
   #hidden-checkbox,
@@ -166,18 +161,22 @@ footer {
   }
 
   /* .wrapper {
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
-  }
+    flex-wrap: wrap;
+  } */
   
-  .title {
+  /* .title {
     margin-right: auto;
-  }
+  } */
   
-  #hidden-checkbox,
-  .menu-toggle {
+  #hidden-checkbox {
   display: none;
+  }
+
+  /* .title,
+  .menuOptions {
+    display: inline-block;
   } */
 
   .navBar {
@@ -187,13 +186,38 @@ footer {
     padding: 1em 1.5em;
     box-shadow: 0px 3px 5px black;
     border-width: 20px;
+    flex-direction: row;
+    justify-content: space-between;
     flex-wrap: wrap;
+    /* flex-wrap: wrap; */
   }
 
-  .menu-toggle {
+  .title {
+    margin-right: auto;
+    /* position: absolute;
+    left: 0;
+    top: 0; */
+  }
+
+  .menuOptions {
+    /* position: absolute;
+    right: 0;
+    top: 0; */
+    margin-left: auto;
+  }
+
+  /* .menuOptions {
+    margin-left: auto;
+  } */
+
+  /* #hidden-checkbox {
     display: none;
-  }
+  } */
 
+  .content {
+    padding-top: 6em;
+  }
+  
   footer {
     text-align: left;
     background-color: grey;
