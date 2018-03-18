@@ -40,7 +40,7 @@ nav h1 {
 }
 
 /* Center list items when stacked, override ul tag's default properties*/
-ul {
+nav ul {
   padding-top: 0.3em;
   margin-bottom: 0em;
 }
