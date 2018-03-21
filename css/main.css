@@ -74,7 +74,7 @@ footer {
 /* Center nav bar content on mobile devices until first min-width breakpoint kicks in. */
 .wrapper {
   margin: 0 auto;
-  max-width: 768px;
+  /* max-width: 768px; */
   padding: 0 2%;
   align-items: center;
   /* display: flex;
@@ -103,9 +103,9 @@ footer {
   }
 
   /* Hide the first list item because it does not work for mobile first but helps with desktop flexbox. */ 
-  nav ul li:first-child {
+  /* nav ul li:first-child {
     display: none;
-  }
+  } */
 
   nav ul li a {
     color: #202020;
@@ -165,18 +165,21 @@ footer {
     min-height: 100vh;
   }
 
-  /* .wrapper {
+  .wrapper {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
-    flex-wrap: wrap;
-  } */
+    align-items: center;
+    /* flex-wrap: wrap; */
+  }
   
   /* .title {
     margin-right: auto;
   } */
 
   .title {
-    display: none;
+    /* display: none; */
+    font-size: 1.25em;
   }
 
   #hidden-checkbox {
@@ -214,15 +217,16 @@ footer {
     /* position: absolute;
     right: 0;
     top: 0; */
-    margin-left: auto;
+    /* margin-left: auto; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    /* flex-wrap: wrap; */
   }
 
-  .item-1 {
+  /* .menuOptions:first-child {
     margin-right: auto;
-  }
+  } */
 
   .content {
     padding-top: 6em;
