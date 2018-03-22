@@ -31,7 +31,6 @@ nav {
 }
 
 nav h1 {
-  /* color: #F8F8F8; */
   font-size: 1.35em;
   display: inline-block;
   padding-top: 1em;
@@ -40,8 +39,7 @@ nav h1 {
 }
 
 nav ul {
-  /* Remove default bullet points. */
-  list-style-type: none;
+  list-style-type: none; /* Remove default bullet points. */
   padding-top: 0.3em;
   margin-bottom: 0em;
 }
@@ -64,21 +62,11 @@ footer {
 
 /* ---- Navigation ---- */
 
-/* Fix navBar to top of screen and make it span the whole width of screen.
-.navBar {
-  background-color: #202020;
-  top: 0;
-  min-width: 100%;
-} */
-
 /* Center nav bar content on mobile devices until first min-width breakpoint kicks in. */
 .wrapper {
   margin: 0 auto;
-  /* max-width: 768px; */
   padding: 0 2%;
   align-items: center;
-  /* display: flex;
-  justify-content: space-between; */
 }
 
 @media (max-width: 768px) {  
@@ -101,11 +89,6 @@ footer {
     font-size: 1.5em;
     padding: 2em 0;
   }
-
-  /* Hide the first list item because it does not work for mobile first but helps with desktop flexbox. */ 
-  /* nav ul li:first-child {
-    display: none;
-  } */
 
   nav ul li a {
     color: #202020;
@@ -149,9 +132,9 @@ footer {
   padding-top: 3.75em;
 }
 
-/* =======================================================
+/* ===========================================================================================
   Media Queries (wide screen appearance stuff)
-========================================================== */
+=========================================================================================== */
 
 /* iPad has width of 768px, therefore anything wider than that will be first media query. Source: http://www.javascriptkit.com/dhtmltutors/cssmediaqueries2.shtml */
 
@@ -170,26 +153,15 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    /* flex-wrap: wrap; */
   }
-  
-  /* .title {
-    margin-right: auto;
-  } */
 
   .title {
-    /* display: none; */
     font-size: 1.25em;
   }
 
   #hidden-checkbox {
   display: none;
   }
-
-  /* .title,
-  .menuOptions {
-    display: inline-block;
-  } */
 
   .navBar {
     background-color: grey;
@@ -198,35 +170,13 @@ footer {
     padding: 1em 1.5em;
     box-shadow: 0px 3px 5px black;
     border-width: 20px;
-    /* flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap; */
-    /* flex-wrap: wrap; */
   }
 
-  /* .wrapper {
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-  } */
-
   .menuOptions {
-    /* position: absolute;
-    right: 0;
-    top: 0; */
-    /* margin-left: auto; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* flex-wrap: wrap; */
   }
-
-  /* .menuOptions:first-child {
-    margin-right: auto;
-  } */
 
   .content {
     padding-top: 6em;
@@ -250,21 +200,11 @@ footer {
     font-size: 125%; /* Makes font size 125% of parent container. */
   }
 
-  /* .menuOptions {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  } */
-
   .menuOptions a {
     color: snow;
     text-decoration: none;
     font-weight: bold;
   }
-  
-  /* .title {
-    margin-right: auto;
-  } */
 
   .content {
     flex-grow: 1;
