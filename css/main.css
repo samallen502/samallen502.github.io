@@ -31,7 +31,8 @@ nav {
 }
 
 nav h1 {
-  font-size: 1.35em;
+  /* font-size: 1.35em; */
+  font-size: 1.3em; /* Changing to this because even though Chrome Dev says 1.35em works, in reality it does not. Tested on iPhone 7 & X. Think h1 size is forcing mobile hamburger down a line.*/
   display: inline-block;
   padding-top: 1em;
   margin-top: 0;
