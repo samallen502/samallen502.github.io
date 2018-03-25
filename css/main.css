@@ -1,6 +1,7 @@
-/* Load normalize.css and font CDNs (removed from HTML for faster loading if user has cached). */
+/* Load normalize.css and font CDNs (removed from HTML for faster loading if user has cached).
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css');
 @import url('https://fonts.googleapis.com/css?family=Julius+Sans+One');
+Removed from CSS and put back into HTML because I want to use a JS-based CDN failsafe. */
 
 /* ===========================================================================================
   Base Styles (how elements shoud look across all viewports unless overridden by media query)
@@ -67,7 +68,7 @@ footer {
 .wrapper {
   margin: 0 auto;
   padding: 0 2%;
-  align-items: center;
+  /* align-items: center; */
 }
 
 @media (max-width: 768px) {  
@@ -166,10 +167,7 @@ footer {
   .navBar {
     background-color: grey;
     color: snow;
-    font: bolder;
     padding: 1em 1.5em;
-    box-shadow: 0px 3px 5px black;
-    border-width: 20px;
   }
 
   .menuOptions {
