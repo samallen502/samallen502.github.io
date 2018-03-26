@@ -38,10 +38,15 @@ There are more classes within the css/main.css file but the above section serves
 ```
 The JavaScript functions I created are:
 
-1. Function name:
-    Purpose: During the early stages of development, I had an issue that I struggled with for over 24 hours because my normalize.css CDN, which is imported withing css/main.css, failed. This inspired me to implement a failsafe so that the issue does not occur again. If the CDN fails, JavaScript sources normalize.css from a local file that contains normalize.css.  I still want to use a CDN primarily, however, as I have learned that CDNs lend themselves to faster webpage loading. The failsafe is just a "Plan B" contingency plan for when the CDN fails, which as I understand it happens rarely, but when it does can make my webpage display improperly.
+1. Function name: "normalizeFailsafe()" (within js/CDNfailsafe.js)
+    Purpose: During the early stages of development, I had an issue that I struggled with for over 24 hours because my normalize.css CDN, which is imported within index.html, failed. This inspired me to implement a failsafe so that the issue does not occur again. If the CDN fails, JavaScript sources normalize.css from a local file that contains normalize.css (css/normalize_v8.0.0).  I still want to use a CDN primarily, however, as I have learned that CDNs lend themselves to faster webpage loading. The failsafe is just a "Plan B" contingency plan for when the CDN fails, which as I understand it happens rarely, but when it does can make my webpage display improperly. To test that this works, simply sabotage any letter in the CDN for normalize as seen within HTML, reload the page, and view the console. You will see:
 
-2. Function name: $('#content').hide().fadeIn(2000);
+        index.html:16 GET https://dnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css net::ERR_NAME_NOT_RESOLVED
+        index.html:1 Normalize CDN failed but local backup of normalize loaded.
+
+    The local last line logged to the console comes from the normalizeFailsafe() function and serves as verification that the fix worked.  Later, this same JS file will be fleshed out to provide redundancy in case of other CSS failures.
+
+2. Function name: "$('#content').hide().fadeIn(2000);"
     Purpose: Within index.html, you'll notice:
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="js/app.js" type="text/javascript" charset="utf-8"></script>
