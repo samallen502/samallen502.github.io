@@ -71,15 +71,15 @@ footer {
   /* align-items: center; */
 }
 
-@media (max-width: 768px) {  
+@media (max-width: 768px) {
   nav ul {
-    background-color: #DCDCDC;
+    background-color: #202020;
     display: block;
     height: 0;
     opacity: 0;
     text-align: center;
     /* Upon user toggle, transition height, opacity, and visibility. */
-    transition: all 1s ease;
+    transition: all 1s ease; /* IDEA: Maybe comment this out and use JavaScript so there's no transition for users making desktop viewport more narrow (transition shows, annoying)? */
     width: 100%;
     visibility: hidden;
   }
@@ -87,6 +87,7 @@ footer {
   nav ul li {
     border-bottom: 2px solid #202020;
     color: #202020;
+    background-color: #DCDCDC;
     display: block;
     font-size: 1.5em;
     padding: 2em 0;
@@ -138,6 +139,13 @@ footer {
   Media Queries (wide screen appearance stuff)
 =========================================================================================== */
 
+/* This ensures proper display on iPhone 5/SE. */
+@media (max-width: 568px) {
+  .title {
+    font-size: 1.15em;
+  }
+}
+
 /* iPad has width of 768px, therefore anything wider than that will be first media query. Source: http://www.javascriptkit.com/dhtmltutors/cssmediaqueries2.shtml */
 @media (min-width: 769px) {
   body {
@@ -146,7 +154,7 @@ footer {
     /* Next 3 lines force a sticky footer (along with ".content" "flex-grow" rule) by: (1) making all child elements flex items; (2) stacking all child elements vertically; and (3) making the body take up the entire height of the viewport */
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100vh; /* IDEA: Possibly move this to main so that when viewport on desktop is squished (long), footer still is at the bottom? */
   }
 
   .wrapper {

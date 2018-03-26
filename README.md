@@ -58,13 +58,14 @@ Later, I intend to add more JavaScript to provide functions that only JavaScript
 
 
 ## Acknowledgements
-
+```
 I would like to take this opportunity to thank some folks who shared knowledge, making this project possible:
 
 1. https://blog.christopherianmurphy.com/2016/01/responsive-pure-css-menu/ helped inspire a responsive mobile-first menu that was intentionally free of JavaScript (as core features should not depend upon JavaScript per the "unobtrusive JavaScript" principle).
-
+```
 
 
 ## Lessons Learned
-
+```
 1. Patience in troubleshooting and due diligence in testing your website on actual devices -- not just relying on Chrome/Firefox's emulations of mobile devices, for example -- is so necessary.  For a great, actual example of me going through the process, see: https://teamtreehouse.com/community/entire-page-content-shifting-to-right-unsure-why
+```
