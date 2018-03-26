@@ -3,18 +3,15 @@
 
 
 ## Description
-```
 As part of the graduation requirements for Code Louisville's Front End Web Development (FEWD) track, completion of a project* is required.  For my project, I elected to create a professional website, which will serve to market my skills and provide a platform to showcase future projects. The project will be built using a "mobile first" design philosophy and will feature HTML, CSS, & JavaScript.
 
 AS OF 3/25/2018, THIS WEBSITE IS STILL IN DEVELOPMENT AND IS NOT REPRESENTATIVE OF THE FINAL PRODUCT, ALTHOUGH THE REQUIREMENTS FOR CODE LOUISVILLE'S GRADING RUBRIC HAVE BEEN SATISFIED.
 
 * https://github.com/CodeLouisville/Student-Resources/wiki/Front-End-Web-Development-Project-Requirements
-```
 
 
 
 ## Custom CSS Classes & ID Selectors
-```
 The classes and ID selectors that I created are:
 
 1. Class name: .navBar
@@ -30,12 +27,10 @@ The classes and ID selectors that I created are:
     a. Purpose: This is a powerful tool that drives the navigational menu for narrow (smartphone) viewports. I could have used JavaScript to perform this function but chose not to as many browsers block JavaScript, in which case a very important navigational menu driven by JavaScript would not function (unacceptable). In keeping with the principles of unobtrusive JavaScript, I have used HTML and CSS only for my navigational menu. The #hidden-checkbox, when checked, works to display .menuOptions on 100% of the viewport. This tool maximizes content on narrow viewports until menu items need to be revealed, at which point the focus shifts to the menu items.
 
 There are more classes within the css/main.css file but the above section serves to demonstrate competency in using custom CSS classes and ID selectors.
-```
 
 
 
 ## Custom JavaScript Functions
-```
 The JavaScript functions I created are:
 
 1. Function name: "normalizeFailsafe()" (within js/CDNfailsafe.js)
@@ -53,19 +48,14 @@ The JavaScript functions I created are:
     The app.js file houses jQuery code. In just one line, I was able to fade in all content. This exemplifies jQuery's motto: "Write less. Do more!" Also, this supports the principle of unobtrusive JavaScript, as if for some reason app.js was blocked, the content would sitll show, although it would show in a less fancy manner.
 
 Later, I intend to add more JavaScript to provide functions that only JavaScript can perform, like proofreading a form before allowing submission within the "Business Inquiries" section and importing Treehouse achievements into the "Credibility" section.
-```
 
 
 
 ## Acknowledgements
-```
 I would like to take this opportunity to thank some folks who shared knowledge, making this project possible:
 
 1. https://blog.christopherianmurphy.com/2016/01/responsive-pure-css-menu/ helped inspire a responsive mobile-first menu that was intentionally free of JavaScript (as core features should not depend upon JavaScript per the "unobtrusive JavaScript" principle).
-```
 
 
 ## Lessons Learned
-```
 1. Patience in troubleshooting and due diligence in testing your website on actual devices -- not just relying on Chrome/Firefox's emulations of mobile devices, for example -- is so necessary.  For a great, actual example of me going through the process, see: https://teamtreehouse.com/community/entire-page-content-shifting-to-right-unsure-why
-```
