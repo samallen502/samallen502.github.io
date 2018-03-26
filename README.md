@@ -52,7 +52,7 @@ The JavaScript functions I created are:
         <script src="js/app.js" type="text/javascript" charset="utf-8"></script>
     The app.js file houses jQuery code. In just one line, I was able to fade in all content. This exemplifies jQuery's motto: "Write less. Do more!" Also, this supports the principle of unobtrusive JavaScript, as if for some reason app.js was blocked, the content would sitll show, although it would show in a less fancy manner.
 
-Later, I intend to add more JavaScript to provide functions that only JavaScript can perform, like proofreading a form before allowing submission within the "Business Inquiries" section.
+Later, I intend to add more JavaScript to provide functions that only JavaScript can perform, like proofreading a form before allowing submission within the "Business Inquiries" section and importing Treehouse achievements into the "Credibility" section.
 ```
 
 
